@@ -1,16 +1,114 @@
-# React + Vite
+# ✈️ TravelMadeEazy
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> AI-Powered Travel Advisor — Plan your perfect trip with live weather, budget planning, and AI suggestions!
 
-Currently, two official plugins are available:
+![TravelMadeEazy](https://img.shields.io/badge/TravelMadeEazy-Live-brightgreen)
+![Python](https://img.shields.io/badge/Python-3.13-blue)
+![React](https://img.shields.io/badge/React-Vite-61DAFB)
+![FastAPI](https://img.shields.io/badge/FastAPI-0.135-009688)
+![Groq](https://img.shields.io/badge/AI-Groq%20Llama3-orange)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 🌟 Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- 🌤️ **Live Weather** — Real-time weather of any city using OpenWeather API
+- 🤖 **AI Travel Advisor** — Personalized trip plans using Groq (Llama 3.3)
+- 💰 **Budget Planning** — Set your budget and get suggestions accordingly
+- 🎯 **Interest Based** — Mountains, Beach, Food, Adventure and more!
+- 📱 **Responsive UI** — Beautiful, modern React frontend
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tech Stack
+
+| Layer | Technology |
+|-------|-----------|
+| Frontend | React.js + Vite |
+| Backend | Python + FastAPI |
+| AI Model | Groq (Llama 3.3 70B) |
+| Weather | OpenWeather API |
+| Styling | CSS-in-JS |
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Python 3.10+
+- Node.js 18+
+- Git
+
+### 1. Clone the Repository
+```bash
+git clone https://github.com/himanshu29092005/travel-advisory-app.git
+cd travel-advisory-app
+```
+
+### 2. Backend Setup
+```bash
+cd backend
+python -m venv venv
+venv\Scripts\activate
+pip install -r requirements.txt
+```
+
+Create `.env` file in backend folder:
+```
+OPENWEATHER_API_KEY=your_key_here
+GROQ_API_KEY=your_key_here
+```
+
+Run backend:
+```bash
+uvicorn main:app --reload
+```
+
+### 3. Frontend Setup
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+### 4. Open in Browser
+```
+Frontend → http://localhost:5173
+Backend  → http://localhost:8000
+API Docs → http://localhost:8000/docs
+```
+
+---
+
+## 📸 Screenshots
+
+### Home Page
+![Home](screenshots/home.png)
+
+### AI Response
+![AI](screenshots/ai.png)
+
+---
+
+## 🔑 API Keys Required
+
+| API | Link | Free? |
+|-----|------|-------|
+| OpenWeather | [openweathermap.org](https://openweathermap.org/api) | ✅ Free |
+| Groq | [console.groq.com](https://console.groq.com) | ✅ Free |
+
+---
+
+## 👨‍💻 Developer
+
+**Himanshu** — Built with ❤️
+
+[![GitHub](https://img.shields.io/badge/GitHub-himanshu29092005-black)](https://github.com/himanshu29092005)
+
+---
+
+## 📄 License
+
+MIT License — Free to use and modify!
+
+
