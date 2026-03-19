@@ -28,7 +28,7 @@ Give helpful travel suggestions in English with specific places, costs and tips.
         response = client.chat.completions.create(
             model="llama-3.3-70b-versatile",
             messages=[{"role": "user", "content": prompt}],
-            max_tokens=500
+            max_tokens=32600
         )
         
         return {"reply": response.choices[0].message.content}
