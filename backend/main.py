@@ -6,7 +6,12 @@ app = FastAPI(title="Travel Advisory API")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],
+    allow_origins=[
+        "http://localhost:5173",
+        "https://travelmadeeazy.vercel.app",
+        "https://travelmadeeazy-qofcsxhuw-sachdevahimanshu2909-6407s-projects.vercel.app"
+    ],
+    allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
