@@ -31,7 +31,7 @@ export default function App() {
     setCity(val)
     if (val.length >= 2) {
       try {
-        const res = await axios.get(`http://localhost:8000/api/weather/suggest/${val}`)
+        const res = await axios.get(`https://travelmadeeazy-backend.onrender.com/api/weather/suggest/${val}`)
         setSuggestions(res.data.suggestions)
         setShowSuggestions(true)
       } catch {
@@ -56,7 +56,7 @@ export default function App() {
     setWeather(null)
     setWeatherTip("")
     try {
-      const res = await axios.get(`http://localhost:8000/api/weather/${encodeURIComponent(cityName)}`)
+      const res = await axios.get(`https://travelmadeeazy-backend.onrender.com/api/weather/${encodeURIComponent(cityName)}`)
       setWeather(res.data)
       if (!res.data.error) getWeatherTip(res.data)
     } catch {
@@ -73,7 +73,7 @@ export default function App() {
   const getWeatherTip = async (weatherData) => {
     setWeatherTipLoading(true)
     try {
-      const res = await axios.post("http://localhost:8000/api/chat/", {
+      const res = await axios.post("https://travelmadeeazy-backend.onrender.com/api/chat/", {
         message: `Weather in ${weatherData.city}: ${weatherData.weather}, ${weatherData.temperature}°C, humidity ${weatherData.humidity}%, wind ${weatherData.wind_speed} m/s.
 1. Is it a good time to visit? Why?
 2. What should tourists pack/wear?
@@ -94,7 +94,7 @@ Keep it short and practical.`,
     setChatLoading(true)
     setReply("")
     try {
-      const res = await axios.post("http://localhost:8000/api/chat/", {
+      const res = await axios.post("https://travelmadeeazy-backend.onrender.com/api/chat/", {
         message,
         budget: parseFloat(budget),
         interests,
